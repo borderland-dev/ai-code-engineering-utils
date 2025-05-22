@@ -29,13 +29,12 @@ This document defines the rules and guidelines for AI-assisted code generation i
 2. **Project Structure**:
    ```
    src/main/kotlin/com/company/project/
-   ├── domain/           # Domain models, business logic
-   │   ├── model/        # Domain entities
-   │   ├── service/      # Business services
-   │   └── port/         # Interfaces for external dependencies
-   ├── application/      # Application services, use cases
-   │   ├── dto/          # Data Transfer Objects
-   │   └── service/      # Application services
+   ├── application/      # Application core containing domain and use cases
+   │   ├── domain/       # Domain models, business logic
+   │   │   └── model/    # Domain entities
+   │   ├── usecases/     # Application use cases
+   │   │   └── impl/     # Use case implementations
+   │   ├── ports/        # Ports definition
    ├── adapter/          # Implementations of ports
    │   ├── in/           # Inbound adapters (REST controllers)
    │   │   └── rest/     # REST controllers
